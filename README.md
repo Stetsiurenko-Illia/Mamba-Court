@@ -13,7 +13,7 @@
 ---
 
 ## 📸 Preview
-*(Add a screenshot of your homepage here. E.g., `![Homepage](./images/screenshot.png)`)*
+![Mamba Court Homepage](./images/screenshot.png)
 
 ## ✨ Key Features
 
