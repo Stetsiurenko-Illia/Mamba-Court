@@ -13,7 +13,7 @@
 ---
 
 ## 📸 Preview
-![Mamba Court Homepage](./images/screenshot.png)
+![Mamba Court Homepage](./images/homepage.png)
 
 ## ✨ Key Features
 
