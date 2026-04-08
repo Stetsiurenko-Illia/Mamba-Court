@@ -1,0 +1,276 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+::selection {
+    background-color: $main-purple !important;
+    color: $text-white !important;
+}
+
+::-moz-selection {
+    background-color: $main-purple !important;
+    color: $text-white !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px !important;
+
+    &-track {
+        background-color: $bg-black !important;
+    }
+
+    &-thumb {
+        background-color: $border-color !important;
+        border-radius: 5px !important;
+
+        &:hover {
+            background-color: $main-purple !important;
+        }
+    }
+}
+
+body {
+    background-color: $bg-black;
+    color: $text-white;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+*:focus,
+a:focus,
+button:focus,
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a {
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: 0.3s;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.product_title,
+.cart_totals h2,
+#order_review_heading {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700 !important;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- ПОЛЯ ВВОДУ --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+.wc-block-components-text-input input,
+.woocommerce-checkout input.input-text,
+.woocommerce-checkout textarea {
+    background-color: $border-color !important;
+    border: 1px solid #333 !important;
+    color: $text-white !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    outline: none !important;
+    display: block !important;
+}
+
+.woocommerce-checkout select,
+.wc-block-components-select select,
+.wc-block-components-combobox input {
+    background-color: $border-color !important;
+    color: $text-white !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+}
+
+.wc-block-checkout__form .wc-block-components-address-form__country .wc-blocks-components-select {
+    margin-top: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: auto !important;
+    -webkit-appearance: checkbox !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 12px 0 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    vertical-align: middle !important;
+    accent-color: $accent-gold !important;
+    background-color: $text-white !important;
+    border: 2px solid $main-purple !important;
+
+    &[type="radio"] {
+        border-radius: 50% !important;
+    }
+}
+
+.woocommerce-checkout label,
+.wc-block-checkout__payment-method label,
+.woocommerce-form__label-for-checkbox,
+#payment ul.payment_methods li label {
+    display: inline-flex !important;
+    align-items: center !important;
+    cursor: pointer;
+    color: $text-white !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px;
+}
+
+input:-webkit-autofill {
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        -webkit-box-shadow: 0 0 0 50px $border-color inset !important;
+        -webkit-text-fill-color: $text-white !important;
+        transition: background-color 5000s ease-in-out 0s !important;
+    }
+}
+
+/* --- ЯРЛИКИ ТОВАРІВ --- */
+.mamba-badges {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.mamba-badge {
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+
+    &.badge-new {
+        background-color: $main-purple;
+        color: $text-white;
+    }
+
+    &.badge-sale {
+        background-color: $accent-gold;
+        color: #000;
+    }
+}
+
+/* --- ПОВІДОМЛЕННЯ WOOCOMMERCE --- */
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+    background-color: $card-bg !important;
+    color: $text-white !important;
+    border: 1px solid $border-color !important;
+    border-radius: 12px !important;
+    padding: 20px 30px !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    clear: both !important;
+    line-height: 1.5 !important;
+
+    &::before {
+        display: none !important;
+    }
+
+    .button {
+        float: right !important;
+        background-color: $accent-gold !important;
+        color: #000 !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 14px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        padding: 10px 25px !important;
+        border-radius: 6px !important;
+        border: none !important;
+        margin-top: -5px !important;
+        margin-left: 20px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+        &:hover {
+            background-color: $text-white !important;
+            color: #000 !important;
+            box-shadow: 0 5px 15px rgba(245, 180, 0, 0.4) !important;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.woocommerce-message {
+    border-left: 5px solid $accent-gold !important;
+}
+
+.woocommerce-error {
+    border-left: 5px solid #ff3333 !important;
+}
+
+.woocommerce-info {
+    border-left: 5px solid $main-purple !important;
+}
+
+ul.woocommerce-error {
+    padding-left: 40px !important;
+
+    li {
+        margin-bottom: 10px !important;
+        list-style-type: disc !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .woocommerce-notices-wrapper {
+        width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .woocommerce-message,
+    .woocommerce-error,
+    .woocommerce-info {
+        display: block !important;
+        text-align: center !important;
+        padding: 15px 20px 20px !important;
+        margin: 0 0 25px 0 !important;
+        border-radius: 8px !important;
+
+        .button {
+            display: inline-block !important;
+            float: none !important;
+            margin: 15px auto 0 auto !important;
+            width: auto !important;
+        }
+    }
+}

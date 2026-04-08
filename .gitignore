@@ -1,0 +1,14 @@
+# Системні файли macOS та Windows
+.DS_Store
+Thumbs.db
+
+# Налаштування редактора коду
+.vscode/
+.idea/
+
+# Кеш компілятора SCSS (Live Sass Compiler)
+.sass-cache/
+*.css.map
+
+# Логи
+*.log

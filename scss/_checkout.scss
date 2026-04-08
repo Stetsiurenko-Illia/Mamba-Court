@@ -1,0 +1,714 @@
+/* ==========================================================================
+   КОШИК ТА ОФОРМЛЕННЯ (WOOCOMMERCE BLOCKS)
+   ========================================================================== */
+
+.wp-block-woocommerce-cart,
+.wp-block-woocommerce-checkout {
+    margin-top: 50px !important;
+}
+
+/* --- КОШИК --- */
+.wc-block-cart-items {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+
+    th {
+        color: $accent-gold !important;
+        font-family: "Oswald", sans-serif !important;
+        text-transform: uppercase !important;
+        font-size: 16px !important;
+        border-bottom: 2px solid $main-purple !important;
+        background: transparent !important;
+    }
+
+    td,
+    tr {
+        border-color: $border-color !important;
+        color: $text-white !important;
+    }
+}
+
+.wc-block-components-product-name {
+    color: $text-white !important;
+    font-family: "Oswald", sans-serif !important;
+    font-size: 18px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $main-purple !important;
+    }
+}
+
+.wc-block-components-quantity-selector {
+    background-color: $bg-black !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+
+    input {
+        color: $text-white !important;
+        background: transparent !important;
+    }
+
+    button {
+        color: $accent-gold !important;
+
+        &:hover {
+            background: rgba(245, 180, 0, 0.1) !important;
+        }
+    }
+}
+
+.wc-block-cart-item__remove-link {
+    color: #ff3333 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+}
+
+/* --- ПІДСУМКИ --- */
+.wc-block-cart__totals-inner,
+.wc-block-checkout__order-summary {
+    background-color: $card-bg !important;
+    border: 2px solid $main-purple !important;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    color: $text-white !important;
+    box-shadow: 0 10px 30px rgba(90, 45, 255, 0.1) !important;
+
+    .wc-block-cart__totals-title,
+    .wc-block-components-title {
+        font-family: "Oswald", sans-serif !important;
+        color: $accent-gold !important;
+        font-size: 28px !important;
+        text-transform: uppercase !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+.wc-block-components-totals-item__label,
+.wc-block-components-totals-item__value,
+.wc-block-components-totals-item__description {
+    color: $text-white !important;
+}
+
+.wc-block-cart__submit-container,
+.wc-block-checkout__actions {
+    text-align: right !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button {
+    background-color: $accent-gold !important;
+    color: #000 !important;
+    font-family: "Oswald", sans-serif !important;
+    font-size: 20px !important;
+    border-radius: 8px !important;
+    padding: 15px 40px !important;
+    text-transform: uppercase !important;
+    transition: 0.3s !important;
+    width: auto !important;
+    min-width: 300px !important;
+    border: none !important;
+    margin-top: 20px !important;
+
+    &:hover {
+        background-color: $text-white !important;
+        box-shadow: 0 0 20px rgba(245, 180, 0, 0.4) !important;
+        transform: translateY(-2px);
+    }
+}
+
+/* --- ОФОРМЛЕННЯ (Форми) --- */
+.wc-block-checkout__step-title {
+    font-family: "Oswald", sans-serif !important;
+    color: $accent-gold !important;
+    text-transform: uppercase !important;
+    font-size: 24px !important;
+}
+
+.wc-block-components-text-input input,
+.wc-block-components-textarea textarea,
+.wc-block-components-combobox-control input,
+.wc-block-components-select-control select,
+.wc-block-components-country-input,
+.wc-block-components-state-input {
+    background-color: $bg-black !important;
+    border: 1px solid #333 !important;
+    color: $text-white !important;
+    border-radius: 8px !important;
+}
+
+.wc-block-components-combobox-control__menu {
+    background-color: $border-color !important;
+    border: 1px solid $main-purple !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+
+    &-item {
+        color: $text-white !important;
+        background-color: transparent !important;
+
+        &:hover,
+        &.is-highlighted {
+            background-color: $main-purple !important;
+            color: $text-white !important;
+        }
+    }
+}
+
+.wc-block-components-text-input.is-active input,
+.wc-block-components-text-input input:focus,
+.wc-block-components-combobox-control.is-active input,
+.wc-block-components-select-control.is-active select {
+    border-color: $main-purple !important;
+    box-shadow: 0 0 0 1px $main-purple !important;
+}
+
+.wc-block-components-text-input label,
+.wc-block-components-combobox label,
+.wc-block-components-select label {
+    color: $text-gray !important;
+    font-weight: 600 !important;
+}
+
+.wc-block-components-shipping-rates-control,
+.wc-block-components-checkout-payment-method,
+.wc-block-components-radio-control {
+    width: 100% !important;
+}
+
+.wc-block-components-radio-control-accordion-option,
+.wc-block-components-radio-control-accordion-item {
+    background-color: $border-color !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    color: $text-white !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    &[aria-expanded="true"],
+    &.is-active {
+        border-color: $main-purple !important;
+    }
+}
+
+.wc-block-components-radio-control__input {
+    accent-color: $accent-gold !important;
+}
+
+/* --- ПЕРЕКЛАД WOOCOMMERCE BLOCKS --- */
+.wc-block-components-totals-coupon {
+    .wc-block-components-panel__button {
+        font-size: 0 !important;
+        color: transparent !important;
+        display: flex !important;
+        align-items: center !important;
+
+        &::after {
+            content: "Додати купон" !important;
+            font-size: 16px !important;
+            color: $text-white !important;
+        }
+
+        svg {
+            width: 24px !important;
+            height: 24px !important;
+            color: $text-white !important;
+            display: block !important;
+        }
+    }
+
+    .wc-block-components-text-input label {
+        font-size: 0 !important;
+
+        &::after {
+            content: "Введіть промокод" !important;
+            font-size: 14px !important;
+            color: $text-gray !important;
+        }
+    }
+
+    button {
+        background-color: $main-purple !important;
+        color: $text-white !important;
+        border: none !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 16px !important;
+        text-transform: uppercase !important;
+        border-radius: 8px !important;
+        padding: 0 25px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+        &:hover:not(:disabled) {
+            background-color: $accent-gold !important;
+            color: #000 !important;
+            box-shadow: 0 5px 15px rgba(245, 180, 0, 0.4) !important;
+            transform: translateY(-2px);
+        }
+
+        &:disabled {
+            background-color: $border-color !important;
+            color: $text-gray !important;
+            border: 1px solid #333 !important;
+            cursor: not-allowed !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+    }
+}
+
+.wc-block-components-text-input.is-active label::after,
+.wc-block-components-totals-coupon input:focus+label::after {
+    font-size: 12px !important;
+    color: $main-purple !important;
+}
+
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+    font-size: 0 !important;
+
+    &::after {
+        content: "Загальна сума" !important;
+        font-size: 16px !important;
+    }
+}
+
+.wc-block-checkout__add-note .wc-block-components-checkbox__label {
+    font-size: 0 !important;
+
+    &::after {
+        content: "Додати примітку до замовлення" !important;
+        font-size: 14px !important;
+    }
+}
+
+.wc-block-components-totals-shipping .wc-block-components-totals-item__label {
+    font-size: 0 !important;
+
+    &::after {
+        content: "Доставка" !important;
+        font-size: 16px !important;
+    }
+}
+
+.wc-block-checkout__use-address-for-billing .wc-block-components-checkbox__label {
+    font-size: 0 !important;
+
+    &::after {
+        content: "Використовувати цю адресу для виставлення рахунків" !important;
+        font-size: 14px !important;
+        color: $text-white !important;
+        font-weight: 600 !important;
+    }
+}
+
+.wc-block-components-shipping-rates-control .wc-block-components-radio-control {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+
+.wc-block-components-shipping-rates-control .wc-block-components-radio-control-accordion-option {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Кнопка повернення */
+.wc-block-checkout__actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-top: 40px !important;
+}
+
+.wc-block-components-checkout-return-to-cart-button {
+    color: $text-gray !important;
+    font-family: "Oswald", sans-serif !important;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+
+    &:hover {
+        color: $accent-gold !important;
+        transform: translateX(-8px) !important;
+    }
+}
+
+/* Фон країни */
+.wc-block-components-combobox-control input.wc-block-components-combobox-control__input,
+.wc-block-components-address-form input,
+.wc-block-components-address-form select {
+    background-color: $bg-black !important;
+    color: $text-white !important;
+    box-shadow: none !important;
+}
+
+.wc-block-components-combobox-control {
+    background-color: transparent !important;
+}
+
+.wc-block-checkout__actions,
+.wc-block-checkout__actions_row {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.wc-block-components-checkout-place-order-button {
+    flex: 0 1 auto !important;
+    margin-top: 0 !important;
+}
+
+
+/* --- СТОРІНКА ПОДЯКИ ЗА ЗАМОВЛЕННЯ --- */
+.woocommerce-notice--success,
+.woocommerce-thankyou-order-received,
+.woocommerce-order .woocommerce-notice--success,
+.woocommerce-order .woocommerce-thankyou-order-received {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border: 1px solid $accent-gold !important;
+    color: $accent-gold !important;
+    padding: 20px 30px !important;
+    border-radius: 12px !important;
+    font-family: "Oswald", sans-serif !important;
+    font-size: 26px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 10px 30px rgba(90, 45, 255, 0.2) !important;
+}
+
+ul.woocommerce-order-overview {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    list-style: none !important;
+    margin-bottom: 50px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+
+    li {
+        flex: 1 !important;
+        min-width: 150px !important;
+        border-right: 1px solid #333 !important;
+        padding-right: 20px !important;
+        text-transform: uppercase !important;
+        color: $text-gray !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        margin: 0 !important;
+
+        &:last-child {
+            border-right: none !important;
+            padding-right: 0 !important;
+        }
+
+        strong {
+            display: block !important;
+            color: $text-white !important;
+            font-size: 18px !important;
+            font-family: "Oswald", sans-serif !important;
+            margin-top: 8px !important;
+            letter-spacing: 1px !important;
+        }
+    }
+}
+
+.woocommerce-order-details__title,
+.woocommerce-column__title {
+    color: $accent-gold !important;
+    font-family: "Oswald", sans-serif !important;
+    font-size: 28px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 25px !important;
+    border-bottom: 2px solid $main-purple !important;
+    padding-bottom: 10px !important;
+    display: inline-block !important;
+}
+
+.woocommerce-table--order-details {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    margin-bottom: 50px !important;
+    overflow: hidden !important;
+
+    th,
+    td {
+        padding: 20px !important;
+        border-top: 1px solid $border-color !important;
+        color: $text-white !important;
+        border-bottom: none !important;
+        background: transparent !important;
+    }
+
+    thead th {
+        background-color: #111118 !important;
+        color: $text-gray !important;
+        text-transform: uppercase !important;
+        border-top: none !important;
+        border-bottom: 1px solid #333 !important;
+    }
+
+    tfoot th {
+        text-transform: uppercase !important;
+        color: $text-gray !important;
+        font-weight: 600 !important;
+    }
+
+    td.woocommerce-table__product-name a {
+        color: $text-white !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 18px !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        transition: 0.3s !important;
+
+        &:hover {
+            color: $main-purple !important;
+        }
+    }
+}
+
+.product-quantity {
+    color: $accent-gold !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    margin-left: 5px !important;
+}
+
+.woocommerce-customer-details address,
+.woocommerce-order .woocommerce-customer-details address {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    color: $text-white !important;
+    font-style: normal !important;
+    line-height: 1.8 !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    color: #a0a0a0 !important;
+}
+
+.wc-block-components-address-form {
+
+    .wc-block-components-combobox-control.is-active input,
+    .wc-block-components-combobox-control.has-value input,
+    .wc-block-components-select-control.is-active select,
+    .wc-block-components-select-control.has-value select,
+    select:focus {
+        border-color: $main-purple !important;
+        box-shadow: 0 0 0 1px $main-purple !important;
+    }
+
+    .wc-block-components-combobox-control.is-active label,
+    .wc-block-components-combobox-control.has-value label,
+    .wc-block-components-select-control.is-active label,
+    .wc-block-components-select-control.has-value label {
+        color: $main-purple !important;
+    }
+}
+
+/* ФІКС ТЕКСТУ АДРЕСИ */
+body .wc-block-components-address-card address,
+body .wc-block-components-address-card address .wc-block-components-address-card__address-section--secondary {
+    color: #a0a0a0 !important;
+    line-height: 1.6 !important;
+    font-style: normal !important;
+}
+
+body .wc-block-components-address-summary strong,
+body .wc-block-components-address-card__details strong,
+body .wc-block-components-address-summary .wc-block-components-address-summary__name {
+    color: $text-white !important;
+    font-weight: 600 !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+body .wc-block-components-address-card {
+    padding: 15px 20px !important;
+}
+
+
+/* --- ПОРОЖНІЙ КОШИК --- */
+.wp-block-heading.has-text-align-center.with-empty-cart-icon.wc-block-cart__empty-cart__title,
+.wp-block-woocommerce-empty-cart-block .has-text-align-center {
+    text-align: center;
+}
+
+.wc-block-grid.wp-block-product-new.wp-block-woocommerce-product-new.wc-block-product-new.has-4-columns {
+    display: none;
+}
+
+.wp-block-woocommerce-cart.alignwide .woocommerce.columns-4 .products.columns-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.wp-block-woocommerce-empty-cart-block {
+    .wc-block-grid__product-link {
+        background-color: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+
+    >p a {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: $accent-gold !important;
+        color: #000000 !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        padding: 15px 40px !important;
+        border-radius: 8px !important;
+        margin-top: 15px !important;
+        margin-bottom: 40px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 4px 15px rgba(245, 180, 0, 0.2) !important;
+
+        &:hover {
+            background-color: $text-white !important;
+            color: #000000 !important;
+            box-shadow: 0 0 25px $accent-gold !important;
+            transform: translateY(-3px) !important;
+            border-bottom: none !important;
+        }
+    }
+}
+
+/* ==========================================================================
+   АДАПТИВНІСТЬ
+   ========================================================================== */
+@media (min-width: 992px) {
+
+    .woocommerce-cart .woocommerce,
+    .woocommerce-checkout form.checkout {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .woocommerce-cart-form,
+    .woocommerce-checkout #customer_details {
+        flex: 2;
+        min-width: 0;
+        margin-bottom: 0 !important;
+    }
+
+    .woocommerce-checkout #customer_details {
+        flex: 1.5;
+    }
+
+    .cart-collaterals,
+    .woocommerce-checkout #order_review {
+        flex: 1.2;
+        position: sticky;
+        top: 120px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .woocommerce-checkout #order_review_heading,
+    .woocommerce-checkout #order_review {
+        flex: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .woocommerce-customer-details .col2-set {
+        display: flex !important;
+        gap: 30px !important;
+    }
+
+    .woocommerce-customer-details .col2-set .col-1,
+    .woocommerce-customer-details .col2-set .col-2 {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: none !important;
+        float: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wc-block-components-sidebar-layout.wc-block-checkout {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        gap: 40px !important;
+    }
+
+    .wc-block-checkout__sidebar,
+    .wc-block-checkout__main,
+    .wc-block-components-sidebar-layout .wc-block-components-sidebar,
+    .wc-block-components-sidebar-layout .wc-block-components-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .wc-block-components-product-name,
+    .wc-block-components-totals-item__label {
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .wp-block-woocommerce-cart,
+    .wp-block-woocommerce-checkout {
+        margin-top: 10px !important;
+        padding-top: 0 !important;
+    }
+
+    .wc-block-components-totals-item {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .wc-block-components-totals-item__label {
+        text-align: left !important;
+        margin-right: 15px !important;
+    }
+
+    .wc-block-components-totals-item__value {
+        margin-left: auto !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+        font-weight: 700 !important;
+    }
+
+    .wc-block-components-totals-item__description {
+        display: none !important;
+    }
+}

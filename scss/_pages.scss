@@ -1,0 +1,539 @@
+/* ==========================================================================
+   ІНФОРМАЦІЙНІ СТОРІНКИ (Про нас, Контакти, Бренди, Доставка)
+   ========================================================================== */
+
+body.page:not(.woocommerce-page) {
+
+    /* Базовий лейаут */
+    main {
+        max-width: 1320px !important;
+        margin: 60px auto !important;
+        padding: 0 20px !important;
+
+        >*:not(.is-layout-flex),
+        &:has(.pwb-all-brands)>*:not(.is-layout-flex) {
+            max-width: 800px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    .entry-content {
+        >*:not(.is-layout-flex) {
+            max-width: 800px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        p a {
+            color: $accent-gold !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            border-bottom: 1px dashed $accent-gold !important;
+            transition: 0.3s !important;
+
+            &:hover {
+                color: $text-white !important;
+                border-bottom: 1px solid $main-purple !important;
+            }
+        }
+    }
+
+    /* Заголовки */
+    h2:not(.wpcsc-popup-title),
+    h3:not(.wpcsc-popup-title) {
+        color: $accent-gold !important;
+        font-family: "Oswald", sans-serif !important;
+        text-transform: uppercase !important;
+        margin-top: 50px !important;
+        margin-bottom: 25px !important;
+        font-size: 28px !important;
+        letter-spacing: 1px !important;
+        border-bottom: 1px solid $border-color !important;
+        padding-bottom: 10px !important;
+    }
+
+    h3:not(.wpcsc-popup-title) {
+        font-size: 22px !important;
+        border: none !important;
+    }
+
+    /* Звичайний текст */
+    p {
+        color: $text-gray !important;
+        font-size: 16px !important;
+        line-height: 1.8 !important;
+        margin-bottom: 25px !important;
+    }
+
+    strong,
+    b {
+        color: $text-white !important;
+    }
+
+    /* Списки */
+    .entry-content,
+    .post-content {
+
+        ul,
+        ol,
+        ul.wp-block-list,
+        ol.wp-block-list {
+            padding-left: 20px !important;
+            margin-bottom: 30px !important;
+
+            li {
+                color: $text-gray !important;
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+                margin-bottom: 15px !important;
+                font-family: "Montserrat", sans-serif !important;
+                position: relative !important;
+            }
+        }
+
+        ul,
+        ul.wp-block-list {
+            list-style: none !important;
+            padding-left: 0 !important;
+
+            li {
+                padding-left: 25px !important;
+
+                &::before {
+                    content: "•" !important;
+                    color: $accent-gold !important;
+                    font-size: 24px !important;
+                    position: absolute !important;
+                    left: 0 !important;
+                    top: -4px !important;
+                }
+            }
+        }
+
+        ol li::marker,
+        ol.wp-block-list li::marker {
+            color: $accent-gold !important;
+            font-weight: 700 !important;
+        }
+    }
+
+    /* Знімаємо обмеження 800px для плагіна брендів */
+    main>*:has(.pwb-all-brands),
+    .entry-content>*:has(.pwb-all-brands),
+    main>*:not(.is-layout-flex).pwb-all-brands,
+    .entry-content>*:not(.is-layout-flex).pwb-all-brands {
+        max-width: 1200px !important;
+        width: 100% !important;
+    }
+}
+
+/* --- СТОРІНКА КОНТАКТІВ --- */
+.mamba-contacts-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 30px !important;
+    margin-top: 40px !important;
+    margin-bottom: 60px !important;
+}
+
+.mamba-contact-card {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    padding: 40px 30px !important;
+    text-align: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:hover {
+        border-color: $main-purple !important;
+        transform: translateY(-5px) !important;
+        box-shadow: 0 10px 30px rgba(90, 45, 255, 0.15) !important;
+
+        a {
+            color: $text-white !important;
+            text-shadow: 0 0 10px rgba(90, 45, 255, 0.5) !important;
+        }
+    }
+
+    .contact-icon {
+        font-size: 45px !important;
+        margin-bottom: 20px !important;
+        display: inline-block !important;
+        filter: drop-shadow(0 5px 15px rgba(245, 180, 0, 0.3));
+    }
+
+    h3 {
+        color: $text-white !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 24px !important;
+        margin: 0 0 15px 0 !important;
+        border: none !important;
+    }
+
+    p {
+        color: $text-gray !important;
+        margin: 5px 0 !important;
+        font-size: 16px !important;
+    }
+
+    a {
+        color: $main-purple !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border: none !important;
+        transition: 0.3s !important;
+    }
+}
+
+/* --- СТОРІНКА "ПРО НАС" --- */
+.wp-block-group {
+    &.is-layout-flex:has(> .about-kobe) {
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        gap: 5% !important;
+        width: 100% !important;
+    }
+
+    &:has(+ .about-kobe) {
+        flex: 0 0 55% !important;
+        max-width: 55% !important;
+        position: relative !important;
+        z-index: 1 !important;
+        padding: 20px 0 !important;
+
+        &::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 80% !important;
+            height: 100% !important;
+            background-image: url("http://mamba-court.local/wp-content/uploads/2026/03/mamba-hero-logo.png") !important;
+            background-repeat: no-repeat !important;
+            background-position: center 45% !important;
+            background-size: contain !important;
+            opacity: 0.35 !important;
+            z-index: -1 !important;
+            pointer-events: none !important;
+        }
+    }
+}
+
+.about-kobe {
+    flex: 0 0 40% !important;
+    max-width: 40% !important;
+    margin: 0 !important;
+    display: flex !important;
+
+    img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        border-radius: 15px !important;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        border: 1px solid $border-color !important;
+        margin: 0 !important;
+    }
+}
+
+/* --- СТОРІНКА ВІДГУКІВ --- */
+.mamba-reviews-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    margin: 40px 0 60px 0 !important;
+}
+
+.mamba-review-card {
+    background-color: $card-bg !important;
+    border: 1px solid $border-color !important;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:hover {
+        border-color: $main-purple !important;
+        transform: translateY(-5px) !important;
+        box-shadow: 0 10px 30px rgba(90, 45, 255, 0.1) !important;
+    }
+
+    .review-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+        border-bottom: 1px dashed $border-color !important;
+        padding-bottom: 15px !important;
+    }
+
+    .reviewer-name {
+        color: $text-white !important;
+        font-family: "Oswald", sans-serif !important;
+        font-size: 20px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .verified {
+        color: #00d26a !important;
+        font-size: 12px !important;
+        font-family: "Montserrat", sans-serif !important;
+        margin-left: 8px !important;
+        text-transform: uppercase !important;
+    }
+
+    .review-rating {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .review-text {
+        color: $text-gray !important;
+        font-style: italic !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        flex-grow: 1 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .review-product {
+        color: $accent-gold !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        background-color: $bg-black !important;
+        padding: 10px 15px !important;
+        border-radius: 8px !important;
+        display: inline-block !important;
+        align-self: flex-start !important;
+        border: 1px solid $border-color !important;
+    }
+}
+
+/* --- ПЛАГІН БРЕНДІВ --- */
+.pwb-all-brands {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+
+    >div {
+        width: 100% !important;
+        flex: 1 !important;
+    }
+
+    >div:nth-child(n + 6),
+    hr,
+    .pwb-brand-title,
+    .pwb-brand-description,
+    .pwb-brand-count,
+    .pwb-pagination-wrapper {
+        display: none !important;
+    }
+
+    .pwb-brands-cols-outer {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 30px !important;
+        margin-top: 40px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        &::after {
+            display: none !important;
+        }
+    }
+
+    .pwb-brands-col3 {
+        background-color: $card-bg !important;
+        border: 1px solid #1f1f26 !important;
+        border-radius: 12px !important;
+        max-height: 182px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+
+        >div,
+        a {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
+            height: 100% !important;
+            padding: 10px !important;
+            box-sizing: border-box !important;
+            margin: 0 !important;
+        }
+
+        img {
+            height: 120px !important;
+            width: 100% !important;
+            object-fit: contain !important;
+            padding: 0 !important;
+            margin: 35px 0 !important;
+            opacity: 0.4 !important;
+            filter: brightness(0) invert(1) !important;
+            transition: all 0.3s ease !important;
+            box-shadow: none !important;
+            display: block !important;
+            transform: none !important;
+
+            &:hover {
+                opacity: 1 !important;
+                transform: scale(1.1) !important;
+            }
+        }
+
+        &:hover {
+            border-color: $main-purple !important;
+            transform: translateY(-5px) !important;
+            box-shadow: 0 10px 25px rgba(90, 45, 255, 0.15) !important;
+
+            img {
+                opacity: 1 !important;
+                filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(245, 180, 0, 0.8)) !important;
+                transform: none !important;
+            }
+        }
+    }
+}
+
+/* --- ФІКС ПАГІНАЦІЇ --- */
+.woocommerce-pagination ul.page-numbers {
+    display: inline-flex !important;
+    border: none !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    list-style: none !important;
+    align-items: center !important;
+
+    li a,
+    li span {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        background-color: $card-bg !important;
+        color: $text-white !important;
+        border: 1px solid $border-color !important;
+        border-radius: 10px !important;
+        font-family: "Oswald", sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        text-decoration: none !important;
+        transition: 0.3s ease !important;
+        padding: 0 !important;
+
+        &.next,
+        &.prev {
+            font-size: 20px !important;
+            line-height: 1 !important;
+        }
+
+        &:hover {
+            background-color: $main-purple !important;
+            border-color: $main-purple !important;
+            box-shadow: 0 0 15px rgba(90, 45, 255, 0.4) !important;
+        }
+    }
+
+    li span.current {
+        background-color: $main-purple !important;
+        border-color: $main-purple !important;
+        box-shadow: 0 0 15px rgba(90, 45, 255, 0.4) !important;
+    }
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+    border: none !important;
+}
+
+
+/* ==========================================================================
+   АДАПТИВНІСТЬ ДЛЯ СТОРІНОК ТА БРЕНДІВ
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .mamba-brands-section .pwb-all-brands .pwb-brands-cols-outer {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 15px !important;
+        padding-bottom: 20px !important;
+        margin-right: -20px !important;
+        padding-right: 20px !important;
+
+        &::-webkit-scrollbar {
+            display: none !important;
+        }
+    }
+
+    .mamba-brands-section .pwb-all-brands .pwb-brands-col3 {
+        flex: 0 0 45% !important;
+        max-width: 45% !important;
+        scroll-snap-align: start !important;
+        height: 100% !important;
+        padding: 15px !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .wp-block-group {
+        &.is-layout-flex:has(> .about-kobe) {
+            flex-wrap: wrap !important;
+        }
+
+        &:has(+ .about-kobe) {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+
+            &::before {
+                display: none !important;
+            }
+        }
+    }
+
+    .about-kobe {
+        display: none !important;
+    }
+
+    .mb-mamba-watermark-bg {
+        position: relative !important;
+        z-index: 1 !important;
+        padding: 30px 0 !important;
+
+        &::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 90% !important;
+            height: 100% !important;
+            background-image: url("http://mamba-court.local/wp-content/uploads/2026/03/mamba-hero-logo.png") !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: contain !important;
+            opacity: 0.4 !important;
+            z-index: -1 !important;
+            pointer-events: none !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .site-main.container .pwb-all-brands .pwb-brands-cols-outer {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

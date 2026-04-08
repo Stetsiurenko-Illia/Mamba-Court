@@ -1,0 +1,199 @@
+.mamba-footer {
+    background-color: #08080b;
+    border-top: 2px solid $main-purple;
+    color: $text-gray;
+    margin-top: 60px;
+}
+
+.footer-features {
+    border-bottom: 1px solid $border-color;
+    padding: 40px 0;
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .feature-icon {
+        font-size: 30px;
+        background: rgba(90, 45, 255, 0.1);
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid $main-purple;
+        color: $text-white;
+    }
+
+    .feature-text {
+        h4 {
+            color: $text-white;
+            margin: 0 0 5px;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+}
+
+.footer-main {
+    padding: 60px 0;
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+    }
+
+    .footer-col {
+        h3 {
+            color: $text-white;
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 40px;
+                height: 2px;
+                background-color: $accent-gold;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 12px;
+
+                a {
+                    color: $text-gray;
+                    font-size: 14px;
+
+                    &:hover {
+                        color: $accent-gold;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .brand-col p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    color: $accent-gold;
+    text-shadow: 2px 2px 0px $main-purple;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $card-bg;
+        border-radius: 50%;
+        color: $text-white;
+        border: 1px solid #333;
+        font-size: 13px;
+        font-weight: 700;
+
+        &:hover {
+            background-color: $main-purple;
+            border-color: $main-purple;
+            color: $text-white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(90, 45, 255, 0.4);
+        }
+    }
+}
+
+.contact-info li {
+    font-size: 14px;
+    color: $text-gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    a {
+        color: $text-gray;
+
+        &:hover {
+            color: $accent-gold;
+        }
+    }
+}
+
+.footer-bottom {
+    background-color: #040406;
+    padding: 20px 0;
+    font-size: 13px;
+
+    .bottom-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .payment-methods span {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
