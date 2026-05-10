@@ -497,10 +497,11 @@ body .mamba-shop-sidebar .wpc-filters-section:has(.wpc-no-filter-terms),
         color: #999 !important;
         font-size: 14px !important;
     }
-   .wpc-sticky-buttons{
-         background: transparent;
-         border: transparent;
-   }
+    .wpc-filters-section.wpc-filters-section-176 .wpc-sticky-buttons {
+       background: transparent !important;
+       border: none !important;
+       gap: 10px !important;
+    }
 }
 
 .woocommerce-ordering select {
